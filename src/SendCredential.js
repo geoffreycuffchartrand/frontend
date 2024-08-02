@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 async function sendCred(credential) {
     return fetch('http://localhost:3001/', {
+        mode: "cors",
         method: 'POST',
         body: JSON.stringify(credential),
         headers: {

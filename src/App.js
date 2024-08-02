@@ -1,6 +1,6 @@
 import './App.css';
-import React, { Component, useState } from "react";
 import SaveCredential from '../src/SendCredential.js';
+import SearchCredential from '../src/SearchCredential.js';
 
 function App() {
   

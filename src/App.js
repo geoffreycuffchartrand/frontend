@@ -1,9 +1,10 @@
 import './App.css';
-import TableDisplay from '../src/TableDisplay.js';
+// import TableDisplay from '../src/TableDisplay.js';
 import SaveCredential from '../src/SendCredential.js';
-// import SearchCredential from '../src/SearchCredential.js';
+import SearchCredential from '../src/SearchCredential.js';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
-function App() {
+/* function App() {
 
   // create 1000 rows of fake data — the query results from the server will go here instead
   const creds = ["IB Diploma", "OSSD Diploma", "BA", "PhD", "ARCT"]; // list of some possible credentials
@@ -18,9 +19,9 @@ function App() {
   return(
     TableDisplay(credData)
   );
-}
+} */
 
-/*
+
 function App() {
   
     return(
@@ -30,10 +31,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path="search" element={<SearchPage />} />
             <Route path="save" element={<SavePage />} />
-
-            {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
             <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>
@@ -41,6 +38,9 @@ function App() {
   );
 }
 
+/* Note: Using path="*"" means "match anything", so this route
+acts like a catch-all for URLs that we don't have explicit
+routes for. */
 
 
 function Layout() {

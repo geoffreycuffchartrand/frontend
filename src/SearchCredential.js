@@ -11,7 +11,6 @@ async function searchCred(name) {
 
 export default function SearchCredential() {
     const [credential, setCredential] = useState('');
-
     const handleSubmit = async e => {
         e.preventDefault();
         searchCred(credential);

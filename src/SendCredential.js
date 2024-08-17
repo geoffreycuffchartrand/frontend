@@ -6,9 +6,7 @@ async function sendCred(formInput) { // 3. sends the credential to server and pr
         method: "POST", 
         body: JSON.stringify({ cred: formInput }), // turn response into JSON, with cred as key and user input as the value
         headers: { "Content-Type": "application/json" }
-    })
-    .then(data => console.log(data)) 
-    .catch(error => console.error(error)); 
+    }); 
   }
 
 export default function SaveCredential() {

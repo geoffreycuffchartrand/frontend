@@ -1,29 +1,10 @@
 import './App.css';
-// import TableDisplay from '../src/TableDisplay.js';
-import SaveCredential from '../src/SendCredential.js';
-import SearchCredential from '../src/SearchCredential.js';
+import TableDisplay from './GetTable.js';
+import SaveCredential from './SendCredential.js';
+import SearchCredential from './SearchInterface.js';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
-/* function App() {
-
-  // create 1000 rows of fake data — the query results from the server will go here instead
-  const creds = ["IB Diploma", "OSSD Diploma", "BA", "PhD", "ARCT"]; // list of some possible credentials
-  let credData = [];
-  for (let i = 1; i<1000; i++) {
-    let randomCred = creds[Math.floor(Math.random() * creds.length)]; // pick random credential from list
-    credData.push( // and stick it onto the end of credData
-      { id: i, credential: randomCred, verified: "Hopefully"}
-      )
-  }
-
-  return(
-    TableDisplay(credData)
-  );
-} */
-
-
 function App() {
-  
     return(
       <div>
         <Routes>
@@ -31,6 +12,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="search" element={<SearchPage />} />
             <Route path="save" element={<SavePage />} />
+            <Route path="results/:query" element={<ResultsPage />} />
             <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>
@@ -92,6 +74,12 @@ function SavePage() {
 function SearchPage() {
   return (
     SearchCredential()
+  );
+}
+
+function ResultsPage() {
+  return (
+    TableDisplay()
   );
 }
 
